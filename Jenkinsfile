@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                make -C main
+                sh 'make -C main'
                 sh 'g++ main.cpp -o output' 
             }
         }
